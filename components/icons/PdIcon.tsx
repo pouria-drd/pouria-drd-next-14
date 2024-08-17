@@ -5,7 +5,7 @@ const PdIcon = (props: IconProps) => {
     return (
         <svg
             viewBox="0 0 512 512"
-            className={cn("size-9", props.className)}
+            className={cn("size-8 sm:size-9", props.className)}
             fill="currentColor"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg">

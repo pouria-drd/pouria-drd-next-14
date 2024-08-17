@@ -25,7 +25,7 @@ const Typewriter = (typewriterProps: TypewriterProps) => {
         };
     }, []);
 
-    return <span ref={el} />;
+    return <span ref={el} className="truncate" />;
 };
 
 export default Typewriter;
