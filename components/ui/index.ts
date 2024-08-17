@@ -4,6 +4,7 @@ export { default as Backdrop } from "./backdrop/Backdrop";
 export { default as PouriaLogo } from "./logo/PouriaLogo";
 export { default as MenuButton } from "./button/MenuButton";
 export { default as CloseButton } from "./button/CloseButton";
+export { default as Copyright } from "./copyright/Copyright";
 export { default as AppVersion } from "./app-version/AppVersion";
 export { default as Typewriter } from "./type-writer/Typewriter";
 export { default as SkillsWriter } from "./skills-writer/SkillsWriter";
