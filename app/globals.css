@@ -1,33 +1,77 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* ---------------------------------------------------------------------- */
+/* Scroll area */
+
+::-webkit-scrollbar {
+    @apply bg-gray-400/70 w-2 h-1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar-thumb:horizontal {
+    @apply bg-gray-400/90;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar-thumb:vertical {
+    @apply bg-gray-400/90;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+* {
+    scroll-behavior: smooth;
+    @apply font-yekanX;
+}
+
+.glass {
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+}
+
+.app-px {
+    @apply px-4 sm:px-12 md:px-20 lg:px-28 xl:px-36 2xl:px-44;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Fonts area */
+
+@font-face {
+    font-family: "IRANYekanWeb";
+    src: url("../fonts/IranYekan/IRANYekanWebRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "IRANYekanWeb";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/IranYekan/IRANYekanWebBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "IRANYekanX";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/IRANYekanX/IRANYekanX-Regular.woff") format("woff"),
+        url("../fonts/IRANYekanX/IRANYekanX-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IRANYekanX";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/IRANYekanX/IRANYekanX-Bold.woff") format("woff"),
+        url("../fonts/IRANYekanX/IRANYekanX-Bold.woff2") format("woff2");
+}
+
+.ss02 {
+    font-feature-settings: "ss02";
+    -moz-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
+}
+
+.r2l {
+    direction: rtl;
+}
+
+.l2r {
+    direction: ltr;
 }

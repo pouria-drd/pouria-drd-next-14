@@ -1,0 +1,8 @@
+.menuIconContainer {
+    margin: 0;
+    display: grid;
+    overflow: hidden;
+    list-style: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
