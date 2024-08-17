@@ -26,7 +26,7 @@ const SideLink = (props: SideLinkProps) => {
             <Link
                 onClick={props.onClick}
                 href={props.path}
-                className={`transition-colors ${
+                className={`transition-colors w-full ${
                     props.isActive
                         ? "text-drd-neutral-40"
                         : "text-drd-neutral-60"
