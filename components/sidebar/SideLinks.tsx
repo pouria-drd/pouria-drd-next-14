@@ -32,7 +32,7 @@ const SideLinks = (props: SideLinksProps) => {
                     variants={container}
                     initial="hidden"
                     animate="visible"
-                    className="flex flex-col items-center w-full gap-6">
+                    className="flex flex-col items-center w-full gap-2">
                     {navItems.map((item) => {
                         const isActive =
                             pathName === item.path ||

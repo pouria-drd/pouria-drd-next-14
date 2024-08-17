@@ -25,7 +25,6 @@ const SocialCard = () => {
                 icon={<TelegramIcon />}
             />
             <SocialLink
-                className="border-r-2 border-drd-neutral-95 pr-2.5"
                 href="https://github.com/pouria-drd/"
                 icon={<GithubIcon />}
             />
