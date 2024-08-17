@@ -59,7 +59,7 @@ export default function RootLayout({
             <body
                 className={`bg-white flex flex-col min-h-svh ${inter.className}`}>
                 <Navbar />
-                <main className="bg-gray-50 text-drd-neutral-40 flex-1 app-px py-4">
+                <main className="bg-white text-drd-neutral-40 flex-1 app-px py-4">
                     {children}
                 </main>
                 <Footer />

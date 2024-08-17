@@ -37,7 +37,7 @@ const Navbar = () => {
     return (
         <>
             <nav
-                className={`${styles.drdNavbar} glass app-px shadow ${
+                className={`${styles.drdNavbar} glass app-px ${
                     show ? "translate-y-0" : "-translate-y-full"
                 }`}>
                 <PouriaLogo />
