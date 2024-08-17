@@ -6,3 +6,4 @@ export { default as MenuButton } from "./button/MenuButton";
 export { default as CloseButton } from "./button/CloseButton";
 export { default as AppVersion } from "./app-version/AppVersion";
 export { default as Typewriter } from "./type-writer/Typewriter";
+export { default as SkillsWriter } from "./skills-writer/SkillsWriter";

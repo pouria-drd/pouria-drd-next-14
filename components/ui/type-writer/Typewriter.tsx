@@ -14,9 +14,9 @@ const Typewriter = (typewriterProps: TypewriterProps) => {
     useEffect(() => {
         const typed = new Typed(el.current, {
             strings: typewriterProps.texts,
-            typeSpeed: 75,
+            typeSpeed: 100,
             loop: true,
-            cursorChar: "",
+            cursorChar: "|",
         });
 
         return () => {
