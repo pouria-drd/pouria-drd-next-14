@@ -11,7 +11,7 @@ const SocialLink = (props: SocialLinkProps) => {
         <a
             href={props.href}
             className={cn(
-                "text-drd-neutral-70 hover:text-drd-primary cursor-pointer transition-colors duration-200",
+                "text-drd-light-neutral-11 hover:text-drd-primary cursor-pointer transition-colors duration-200",
                 props.className
             )}
             target="_blank">

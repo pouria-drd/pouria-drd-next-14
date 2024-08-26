@@ -21,15 +21,15 @@ const SideLink = (props: SideLinkProps) => {
             variants={item}
             key={props.path}
             className={`flex items-start justify-end gap-2 ${
-                props.isActive && "bg-drd-neutral-95/40"
+                props.isActive && "bg-drd-light-neutral-2"
             } text-right rounded-lg py-2 w-full`}>
             <Link
                 onClick={props.onClick}
                 href={props.path}
                 className={`transition-colors w-full ${
                     props.isActive
-                        ? "text-drd-neutral-40"
-                        : "text-drd-neutral-60"
+                        ? "text-drd-light-neutral-12"
+                        : "text-drd-light-neutral-11"
                 }`}>
                 {props.name}
             </Link>

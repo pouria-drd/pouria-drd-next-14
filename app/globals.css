@@ -6,15 +6,15 @@
 /* Scroll area */
 
 ::-webkit-scrollbar {
-    @apply bg-gray-400/70 w-2 h-1;
+    @apply bg-drd-light-neutral-6 w-2 h-1;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-    @apply bg-gray-400/90;
+    @apply bg-drd-light-neutral-8;
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-    @apply bg-gray-400/90;
+    @apply bg-drd-light-neutral-8;
 }
 
 * {

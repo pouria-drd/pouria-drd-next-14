@@ -14,8 +14,8 @@ const NavLink = (props: NavLinkProps) => {
                 href={props.path}
                 className={`transition-colors ${
                     props.isActive
-                        ? "text-drd-neutral-40"
-                        : "text-drd-neutral-60"
+                        ? "text-drd-light-neutral-12"
+                        : "text-drd-light-neutral-11"
                 } mx-1`}>
                 {props.name}
             </Link>

@@ -1,16 +1,23 @@
+import { cn } from "@/lib/utils";
 import { Typewriter } from "..";
 
-const SkillsWriter = () => {
+interface SkillsWriterProps {
+    className?: string;
+}
+
+const SkillsWriter = (props: SkillsWriterProps) => {
     const skills = ["Vue", "React", "Next-js", "Django", "Unity"];
 
     return (
         <div
-            className="flex items-center justify-between gap-1 
-                text-xl sm:text-2xl w-fit">
+            className={cn(
+                "flex items-center gap-1 text-xl sm:text-2xl w-fit",
+                props.className
+            )}>
             <p className="text-drd-primary truncate">
                 <Typewriter texts={skills} />
             </p>
-            <h5 className="text-drd-neutral-40">Developer</h5>
+            <h5 className="text-drd-light-neutral-12">Developer</h5>
         </div>
     );
 };

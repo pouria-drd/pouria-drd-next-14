@@ -55,13 +55,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="fa-IR">
+        <html lang="fa-ir">
             <body
-                className={`bg-white flex flex-col min-h-svh ${inter.className}`}>
+                className={`bg-drd-light-primary-0 
+                flex flex-col min-h-svh ${inter.className}`}>
                 <Navbar />
-                <main className="bg-white text-drd-neutral-40 flex-1 app-px py-4">
-                    {children}
-                </main>
+                <main className="flex-1 app-px py-4">{children}</main>
                 <Footer />
             </body>
         </html>
