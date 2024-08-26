@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     metadataBase: new URL("https://pouria-drd.ir"),
     title: {
         default: "Pouria DRD",
-        template: "%s Pouria DRD",
+        template: "Pouria DRD | %s",
     },
     description:
         "Pouria Darandi, a full-stack developer skilled in React, Next.js, Django, Django REST, and Unity.",

@@ -1,5 +1,5 @@
 function BlogsPage() {
-    return <div>BlogsPage</div>;
+    return <section>BlogsPage</section>;
 }
 
 export default BlogsPage;

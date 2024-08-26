@@ -1,5 +1,5 @@
 function ContactMePage() {
-    return <div>ContactMePage</div>;
+    return <section>ContactMePage</section>;
 }
 
 export default ContactMePage;
