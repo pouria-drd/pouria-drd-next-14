@@ -2,8 +2,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface SideLinkProps {
-    path: string;
-    name: string;
+    link: NavLink;
     isActive: boolean;
     onClick?: () => void;
 }
@@ -16,22 +15,23 @@ const SideLink = (props: SideLinkProps) => {
             opacity: 1,
         },
     };
+
     return (
         <motion.li
             variants={item}
-            key={props.path}
+            key={props.link.path}
             className={`flex items-start justify-end gap-2 ${
                 props.isActive && "bg-drd-light-neutral-2"
             } text-right rounded-lg py-2 w-full`}>
             <Link
                 onClick={props.onClick}
-                href={props.path}
+                href={props.link.path}
                 className={`transition-colors w-full ${
                     props.isActive
                         ? "text-drd-light-neutral-12"
                         : "text-drd-light-neutral-11"
                 }`}>
-                {props.name}
+                {props.link.name}
             </Link>
 
             {props.isActive && (

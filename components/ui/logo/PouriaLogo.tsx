@@ -11,7 +11,7 @@ const PouriaLogo = (props: PouriaLogoProps) => {
         <Link
             href="/"
             className={cn(
-                "flex text-drd-light-neutral-12 truncate",
+                "transition-all flex text-drd-light-neutral-12 hover:text-drd-light-neutral-14 truncate",
                 props.className
             )}>
             <PdIcon className="text-drd-primary" />

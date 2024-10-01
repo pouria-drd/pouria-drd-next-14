@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { cn } from "@/utils/base";
 
 interface SocialLinkProps {
@@ -8,15 +9,15 @@ interface SocialLinkProps {
 
 const SocialLink = (props: SocialLinkProps) => {
     return (
-        <a
+        <Link
             href={props.href}
             className={cn(
-                "text-drd-light-neutral-11 hover:text-drd-primary cursor-pointer transition-colors duration-200",
+                "text-drd-light-neutral-10 hover:text-drd-primary cursor-pointer transition-colors duration-200",
                 props.className
             )}
             target="_blank">
             {props.icon}
-        </a>
+        </Link>
     );
 };
 

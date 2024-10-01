@@ -69,7 +69,9 @@ const config: Config = {
 
                             // Accessible text, Pairs with: Background colors
                             11: "#5E5F68", // Usage: Secondary text and links
-                            12: "#1E1F24", // Usage: High-contrast text
+                            12: "#3f3f46", // Usage: Secondary text and links
+                            13: "#27272a", // Usage: Secondary text and links
+                            14: "#1E1F24", // Usage: High-contrast text
                         },
                     },
 

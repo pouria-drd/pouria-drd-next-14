@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Blogs",
-    description: "Blogs Page",
+    description: "Pouria Darandi's Blogs",
 };
 
 interface BlogsLayoutProps {

@@ -11,7 +11,7 @@ const CloseButton = (props: CloseButtonProps) => {
     return (
         <button
             className={cn(
-                "transition-colors text-drd-neutral-60 hover:text-drd-neutral-40",
+                "transition-colors text-drd-light-neutral-10 hover:text-drd-light-neutral-13",
                 props.className
             )}
             {...props}>

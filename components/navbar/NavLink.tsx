@@ -1,23 +1,34 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface NavLinkProps {
-    path: string;
-    name: string;
+    link: NavLink;
     isActive: boolean;
 }
 
 const NavLink = (props: NavLinkProps) => {
+    const item: Variants = {
+        hidden: { y: -25, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.15, ease: "easeInOut" },
+        },
+    };
+
     return (
-        <li key={props.path} className="inline-block">
+        <motion.li
+            key={props.link.path}
+            className="inline-block"
+            variants={item}>
             <Link
-                href={props.path}
-                className={`transition-colors ${
+                href={props.link.path}
+                className={`transition-all hover:text-drd-light-neutral-12 ${
                     props.isActive
-                        ? "text-drd-light-neutral-12"
-                        : "text-drd-light-neutral-11"
+                        ? "text-drd-light-neutral-13"
+                        : "text-drd-light-neutral-10"
                 } mx-1`}>
-                {props.name}
+                {props.link.name}
             </Link>
             {props.isActive && (
                 <motion.span
@@ -25,7 +36,7 @@ const NavLink = (props: NavLinkProps) => {
                     className="mt-0.5 h-0.5 bg-drd-primary w-full block"
                 />
             )}
-        </li>
+        </motion.li>
     );
 };
 

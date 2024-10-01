@@ -12,7 +12,7 @@ const MenuButton = (props: MenuButtonProps) => {
     return (
         <button
             className={cn(
-                "transition-colors sm:hidden border-2 border-drd-neutral-90 hover:border-drd-neutral-80 text-drd-primary rounded-xl p-1",
+                "transition-colors sm:hidden border-2 text-drd-primary rounded-xl p-1",
                 props.className
             )}
             {...props}>

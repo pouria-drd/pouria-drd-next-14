@@ -3,7 +3,7 @@ import { Fragment } from "react";
 
 export const metadata: Metadata = {
     title: "Contact Me",
-    description: "Contact Me Page",
+    description: "How to Contact pouria darandi",
 };
 
 interface ContactMeLayoutProps {
