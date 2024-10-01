@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/base";
 import { MenuIcon } from "@/components/icons";
 
 interface MenuButtonProps

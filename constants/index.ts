@@ -4,16 +4,16 @@ export const navItems = [
         path: "/",
     },
     {
-        name: "بلاگ",
-        path: "/blogs",
-    },
-    {
         name: "درباره",
         path: "/about",
     },
     {
         name: "تماس",
         path: "/contact-me",
+    },
+    {
+        name: "وبلاگ",
+        path: "/blogs",
     },
     // {
     //     name: "سرویس‌ها",

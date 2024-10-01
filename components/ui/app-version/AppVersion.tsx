@@ -1,4 +1,4 @@
-import { cn, getAppVersion } from "@/lib/utils";
+import { cn, getAppVersion } from "@/utils/base";
 
 interface AppVersionProps {
     className?: string;

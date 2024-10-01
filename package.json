@@ -3,21 +3,19 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "next dev -H 192.168.241.149",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"
     },
     "dependencies": {
-        "@tsparticles/react": "^3.0.0",
         "clsx": "^2.1.1",
         "framer-motion": "^11.3.27",
-        "next": "14.2.5",
+        "jalali-moment": "^3.3.11",
+        "next": "^14.2.13",
         "react": "^18",
         "react-dom": "^18",
-        "react-tsparticles": "^2.12.2",
         "tailwind-merge": "^2.5.2",
-        "tsparticles": "^3.5.0",
         "typed.js": "^2.1.0"
     },
     "devDependencies": {

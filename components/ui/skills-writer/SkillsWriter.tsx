@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import { Typewriter } from "..";
+import { cn } from "@/utils/base";
 
 interface SkillsWriterProps {
     className?: string;

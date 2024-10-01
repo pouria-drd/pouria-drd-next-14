@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/base";
 import SocialLink from "../link/SocialLink";
 import {
     GithubIcon,
