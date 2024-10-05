@@ -27,27 +27,31 @@ const Service = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full h-fit">
                     <ServiceCard>
                         <DesktopIcon />
-                        <Title className="font-normal">Fronted Developer</Title>
+                        <Title className="font-normal">
+                            توسعه دهنده فرانت اِند
+                        </Title>
                         <Paragraph className="max-w-60 sm:max-w-full mx-auto">
-                            ایجاد رابط کاربری های پویا و مدرن با استفاده از
-                            React, Next js, Vue و ...
+                            ایجاد رابط کاربری های مدرن با استفاده از فریم وورک
+                            های محبوب مانند React, Next js و Vue js.
                         </Paragraph>
                     </ServiceCard>
                     <ServiceCard>
                         <CubeIcon />
-                        <Title className="font-normal">Game Developer </Title>
+                        <Title className="font-normal">توسعه بازی</Title>
                         <Paragraph className="max-w-60 sm:max-w-full mx-auto">
                             ساخت بازی های هیحان انگیز و سرگرم کننده با استفاده
-                            از موتور بازی سازی Unity.
+                            از موتور بازی سازی یونیتی (Unity).
                         </Paragraph>
                     </ServiceCard>
 
                     <ServiceCard>
                         <ServerIcon />
-                        <Title className="font-normal">Backend Developer</Title>
+                        <Title className="font-normal">
+                            توسعه دهنده بک اِند
+                        </Title>
                         <Paragraph className="max-w-60 sm:max-w-full mx-auto">
-                            با استفاده از فریم ورک Django ساخت API های قدرتمند
-                            انجام می‌شود.
+                            با بهره گیری از قدرت Django و Django REST ساخت API
+                            های قدرتمند انجام می‌شود.
                         </Paragraph>
                     </ServiceCard>
                 </div>

@@ -12,10 +12,12 @@ export const metadata: Metadata = {
         default: "Pouria DRD",
         template: "Pouria DRD | %s",
     },
+
     description:
-        "Pouria Darandi, a full-stack developer skilled in React, Next.js, Django, Django REST, and Unity.",
+        "پوریا دارندی، توسعه دهنده React, Next js, Django, Django REST, Unity و Vue js",
+
     keywords:
-        "Pouria Darandi, Full-Stack Developer, React, Next.js, Django, Django REST, Unity, Programmer, Portfolio, پوریا دارندی, برنامه‌نویس فول‌استک, ریکت, نکست‌جی‌اس, جنگو, جنگو رست, یونیتی, پوریا, دارندی",
+        "Pouria Darandi, Full-Stack Developer, React, Next.js, Django, Django REST, Unity, Programmer, Portfolio, پوریا دارندی, برنامه‌ نویس فول‌ استک, ریکت, نکست‌ جی‌اس, جنگو, جنگو رست, یونیتی, پوریا, دارندی",
 
     creator: "Pouria Darandi",
     publisher: "Pouria Darandi",
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
         url: "https://pouria-drd.ir",
         title: "Pouria Darandi | Full-Stack Developer",
         description:
-            "A full-stack developer skilled in React, Next.js, Django, Django REST, and Unity.",
+            "پوریا دارندی، توسعه دهنده React, Next js, Django, Django REST, Unity و Vue js",
 
         siteName: "Pouria DRD",
     },
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
         creator: "@pouriaDRD",
         title: "Pouria Darandi | Full-Stack Developer",
         description:
-            "A full-stack developer skilled in React, Next.js, Django, Django REST, and Unity.",
+            "پوریا دارندی، توسعه دهنده React, Next js, Django, Django REST, Unity و Vue js",
     },
     robots: {
         index: true,

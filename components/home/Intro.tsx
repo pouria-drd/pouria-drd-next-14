@@ -38,7 +38,7 @@ const Intro = () => {
                         href="/#services"
                         variant="outlined"
                         className="w-fit">
-                        تماس با ما
+                        تماس با من
                     </Button>
                     <SocialCard className="justify-end l2r" />
                 </div>
@@ -50,8 +50,16 @@ const Intro = () => {
                 className="relative flex items-center justify-end">
                 <div
                     className="bg-drd-light-neutral-2 shadow-inner overflow-clip transition-all  
-                    rounded-full size-60 sm:size-80 md:size-[350px] lg:size-96">
-                    <Image src={pouria} alt="pouria image" priority />
+                    rounded-full w-60 sm:w-80 md:w-[350px] lg:w-96 h-60 sm:h-80 md:h-[350px] lg:h-96">
+                    <Image
+                        src={pouria}
+                        alt="Portrait of Pouria Darandi"
+                        priority
+                        width={350} // Specify the image dimensions
+                        height={350}
+                        layout="responsive" // Responsive behavior
+                        style={{ filter: "grayscale(100%)" }} // Apply the grayscale class
+                    />
                 </div>
             </MotionSlide>
         </div>
