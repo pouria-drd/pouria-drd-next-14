@@ -10,14 +10,11 @@ const PouriaLogo = (props: PouriaLogoProps) => {
     return (
         <Link
             href="/"
-            className={cn(
-                "transition-all flex text-drd-light-neutral-12 hover:text-drd-light-neutral-14 truncate",
-                props.className
-            )}>
+            className={cn("flex items-center truncate", props.className)}>
             <PdIcon className="text-drd-primary" />
-            <p className="text-xl sm:text-2xl font-bold uppercase mx-0.5 ml-1 mt-2">
+            <h3 className="text-xl sm:text-2xl font-bold uppercase mx-0.5 ml-1 mt-2">
                 Pouria DRD
-            </p>
+            </h3>
         </Link>
     );
 };

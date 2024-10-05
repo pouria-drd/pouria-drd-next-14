@@ -10,3 +10,7 @@ export { default as GithubIcon } from "./socials/GithubIcon";
 export { default as TwitterIcon } from "./socials/TwitterIcon";
 export { default as TelegramIcon } from "./socials/TelegramIcon";
 export { default as InstagramIcon } from "./socials/InstagramIcon";
+
+export { default as CubeIcon } from "./CubeIcon";
+export { default as ServerIcon } from "./ServerIcon";
+export { default as DesktopIcon } from "./DesktopIcon";

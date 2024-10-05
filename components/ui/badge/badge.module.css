@@ -1,0 +1,5 @@
+.vandBadge {
+    @apply flex items-center justify-center
+    text-center text-[10px] sm:text-xs px-2 py-1 min-w-12
+    rounded-md font-medium;
+}

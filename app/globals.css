@@ -19,7 +19,24 @@
 
 * {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
     @apply font-yekanX;
+}
+
+/* ---------------------------------------------------------------------- */
+/* General area */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply transition-all text-drd-light-neutral-12 hover:text-drd-light-neutral-13;
+}
+
+p {
+    @apply transition-all text-drd-light-neutral-10 /*hover:text-drd-light-neutral-13*/;
 }
 
 .glass {
