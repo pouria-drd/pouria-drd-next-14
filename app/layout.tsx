@@ -1,10 +1,54 @@
 import "./globals.css";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const keywords: string[] = [
+    "Pouria Darandi",
+
+    "React",
+    "Unity",
+    "Django",
+    "Next.js",
+    "Django REST",
+
+    "Portfolio",
+    "Programmer",
+
+    "Full-Stack Developer",
+    "Full Stack Developer",
+
+    "Developer",
+    "developer",
+    "Web Developer",
+    "Back End Developer",
+    "Front End Developer",
+
+    "iran",
+
+    "drd",
+    "pouria",
+    "Darandi",
+    "pouria drd",
+    "pouria darandi",
+
+    "پوریا",
+    "دارندی",
+    "پوریا دارندی",
+
+    "برنامه‌ نویس فول‌ استک",
+
+    "ریکت",
+    "جنگو",
+    "یونیتی",
+    "جنگو رست",
+    "نکست‌ جی‌اس",
+];
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://pouria-drd.ir"),
@@ -14,10 +58,9 @@ export const metadata: Metadata = {
     },
 
     description:
-        "پوریا دارندی، توسعه دهنده React, Next js, Django, Django REST, Unity و Vue js",
+        "Pouria Darandi, React, Next js, Vue js, Django, Django REST and Unity Developer",
 
-    keywords:
-        "Pouria Darandi, Full-Stack Developer, React, Next.js, Django, Django REST, Unity, Programmer, Portfolio, پوریا دارندی, برنامه‌ نویس فول‌ استک, ریکت, نکست‌ جی‌اس, جنگو, جنگو رست, یونیتی, پوریا, دارندی",
+    keywords: keywords,
 
     creator: "Pouria Darandi",
     publisher: "Pouria Darandi",
@@ -29,21 +72,23 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         type: "website",
-        url: "https://pouria-drd.ir",
-        title: "Pouria Darandi | Full-Stack Developer",
-        description:
-            "پوریا دارندی، توسعه دهنده React, Next js, Django, Django REST, Unity و Vue js",
-
         siteName: "Pouria DRD",
+        url: "https://pouria-drd.ir",
+        title: "Pouria Darandi | Programmer",
+        description:
+            "Pouria Darandi, React, Next js, Vue js, Django, Django REST and Unity Developer",
     },
     twitter: {
-        card: "summary_large_image",
-        creatorId: "@pouriaDRD",
-        site: "https://pouria-drd.ir",
         creator: "@pouriaDRD",
-        title: "Pouria Darandi | Full-Stack Developer",
+        creatorId: "@pouriaDRD",
+        card: "summary_large_image",
+        site: "https://pouria-drd.ir",
+        title: "Pouria Darandi | Programmer",
         description:
-            "پوریا دارندی، توسعه دهنده React, Next js, Django, Django REST, Unity و Vue js",
+            "Pouria Darandi, React, Next js, Vue js, Django, Django REST and Unity Developer",
+    },
+    alternates: {
+        canonical: "https://pouria-drd.ir",
     },
     robots: {
         index: true,
@@ -59,10 +104,9 @@ function RootLayout({
     return (
         <html lang="fa-ir">
             <body
-                className={`bg-drd-light-primary-0 
-                flex flex-col min-h-svh ${inter.className}`}>
+                className={`bg-drd-light-primary-0 flex flex-col min-h-svh ${inter.className}`}>
                 <Navbar />
-                <main className="flex-1 app-px py-4">{children}</main>
+                <main className="flex-1 app-px">{children}</main>
                 <Footer />
             </body>
         </html>

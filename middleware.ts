@@ -1,7 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 async function Middleware(request: NextRequest) {
-    console.log("Middleware Request" /*, request*/);
     // Let the request through
     return NextResponse.next();
 }

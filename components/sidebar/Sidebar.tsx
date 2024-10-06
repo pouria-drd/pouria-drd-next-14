@@ -5,8 +5,14 @@ import { SideLink } from ".";
 import { PdIcon } from "../icons";
 import { NavLinkManager } from "../navbar";
 import { usePathname } from "next/navigation";
-import { Variants, AnimatePresence } from "framer-motion";
-import { AppVersion, Backdrop, CloseButton, SocialCard } from "../ui";
+import { Variants, AnimatePresence, motion } from "framer-motion";
+import {
+    AppVersion,
+    Backdrop,
+    CloseButton,
+    MotionSlide,
+    SocialCard,
+} from "../ui";
 
 interface SidebarProps {
     isOpen: boolean;
@@ -24,55 +30,106 @@ const Sidebar = (props: SidebarProps) => {
         return result;
     };
 
-    const container: Variants = {
-        hidden: { opacity: 1, scale: 0 },
+    const navLinkVariants: Variants = {
+        hidden: { y: 20, opacity: 1 },
         visible: {
+            y: 0,
             opacity: 1,
-            scale: 1,
             transition: {
-                delayChildren: 0.2,
+                delay: 0.2,
+                delayChildren: 0.5,
                 staggerChildren: 0.15,
+                ease: "backInOut",
+            },
+        },
+    };
+
+    const sidebarVariants: Variants = {
+        hidden: {
+            x: 100,
+            opacity: 0,
+            transition: {
+                duration: 0.5,
+                ease: "backInOut",
+            },
+        },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                ease: "backInOut",
+            },
+        },
+        exit: {
+            x: 100,
+            opacity: 0,
+            transition: {
+                duration: 0.5,
+                ease: "backInOut",
             },
         },
     };
 
     return (
         <Backdrop isOpen={props.isOpen} onClose={props.onClick}>
-            <aside
-                className={`absolute right-0 glass ${styles.drdSidebar} ${
-                    props.isOpen ? "translate-x-0" : "translate-x-full"
-                }`}
+            <motion.aside
+                exit="exit"
+                initial="hidden"
+                animate="visible"
+                variants={sidebarVariants}
+                className={`${styles.drdSidebar}`}
                 onClick={(e) => e.stopPropagation()}>
-                <div className="flex items-center justify-between w-full">
+                {/* header */}
+                <motion.div
+                    variants={{
+                        hidden: { y: -20, opacity: 0 },
+                        visible: {
+                            y: 0,
+                            opacity: 1,
+                            transition: {
+                                duration: 0.5,
+                                ease: "backInOut",
+                                delay: 0.2,
+                            },
+                        },
+                    }}
+                    initial="hidden"
+                    animate="visible"
+                    className="flex items-center justify-between w-full">
                     <CloseButton onClick={props.onClick} />
-
                     <PdIcon className="text-drd-primary" />
-                </div>
+                </motion.div>
 
+                {/* Links */}
                 <AnimatePresence>
                     {props.isOpen && (
                         <NavLinkManager
                             links={NavLinks}
-                            container={container}
+                            container={navLinkVariants}
                             className="flex flex-col items-center w-full gap-2"
-                            renderItem={(link, index) => {
-                                return (
-                                    <SideLink
-                                        link={link}
-                                        key={index}
-                                        onClick={props.onClick}
-                                        isActive={handleIsActive(link)}
-                                    />
-                                );
-                            }}
+                            renderItem={(link, index) => (
+                                <SideLink
+                                    link={link}
+                                    key={index}
+                                    onClick={props.onClick}
+                                    isActive={handleIsActive(link)}
+                                />
+                            )}
                         />
                     )}
                 </AnimatePresence>
 
-                <SocialCard />
+                {/* social links */}
+                <MotionSlide>
+                    <SocialCard />
+                </MotionSlide>
 
-                <AppVersion className="right-6" />
-            </aside>
+                {/* app version */}
+                <div className="absolute right-4 bottom-4">
+                    <AppVersion />
+                </div>
+            </motion.aside>
         </Backdrop>
     );
 };

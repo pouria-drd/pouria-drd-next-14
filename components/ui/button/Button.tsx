@@ -40,8 +40,8 @@ const Button = (props: ButtonProps) => {
     // Define base class based on variant
     const baseClass =
         variant === "outlined"
-            ? `outline outline-2 outline-drd-primary text-drd-primary 
-            hover:outline-none hover:text-white hover:bg-drd-primary`
+            ? `border-2 border-transparent text-drd-primary 
+            hover: border-drd-primary hover:text-white hover:bg-drd-primary`
             : "text-white bg-drd-primary hover:bg-drd-light-primary-12";
 
     const commonClasses = cn(

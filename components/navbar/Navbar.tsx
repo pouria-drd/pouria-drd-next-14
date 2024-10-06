@@ -4,7 +4,7 @@ import styles from "./navbar.module.css";
 import NavLinks from "@/constants/routes";
 
 import { Sidebar } from "../sidebar";
-import { Variants } from "framer-motion";
+import { AnimatePresence, Variants } from "framer-motion";
 import { Fragment, useState } from "react";
 import { NavLink, NavLinkManager } from ".";
 import { usePathname } from "next/navigation";
@@ -56,12 +56,16 @@ const Navbar = () => {
                 <MenuButton onClick={() => setIsOpen(true)} />
             </nav>
 
-            <Sidebar
-                isOpen={isOpen}
-                onClick={() => {
-                    setIsOpen(false);
-                }}
-            />
+            <AnimatePresence>
+                {isOpen && (
+                    <Sidebar
+                        isOpen={isOpen}
+                        onClick={() => {
+                            setIsOpen(false);
+                        }}
+                    />
+                )}
+            </AnimatePresence>
         </Fragment>
     );
 };

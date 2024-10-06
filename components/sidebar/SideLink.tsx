@@ -21,8 +21,8 @@ const SideLink = (props: SideLinkProps) => {
             variants={item}
             key={props.link.path}
             className={`flex items-start justify-end gap-2 ${
-                props.isActive && "bg-drd-light-neutral-2"
-            } text-right rounded-lg py-2 w-full`}>
+                props.isActive && "bg-drd-light-neutral-3/60"
+            } text-right rounded-md py-2.5 w-full`}>
             <Link
                 onClick={props.onClick}
                 href={props.link.path}
@@ -35,7 +35,7 @@ const SideLink = (props: SideLinkProps) => {
             </Link>
 
             {props.isActive && (
-                <span className="bg-drd-primary rounded-xl h-full w-1 p-0.5" />
+                <span className="bg-drd-primary rounded-lg h-full w-1 p-0.5" />
             )}
         </motion.li>
     );

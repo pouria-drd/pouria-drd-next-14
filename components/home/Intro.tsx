@@ -1,68 +1,114 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import pouria from "@/components/images/trs-pouria.png";
 import {
     Button,
+    Container,
     MotionSlide,
     Paragraph,
     SkillsWriter,
-    SocialCard,
+    Title,
 } from "@/components/ui";
 
 const Intro = () => {
+    const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+    const aboutMe: string = `
+                    متولد 14 بهمن 1380 هستم. فعالیت‌های برنامه‌نویسی خود را از
+                    دی‌ماه 1399 با یادگیری زبان Python به‌صورت خودآموز آغاز
+                    کردم. سپس، از تیر 1400 تا دی 1400 در مجتمع فنی تهران،
+                    دوره‌های الگوریتم در زبان‌های C++ و Python را با نمره 100 از
+                    100 و همچنین دوره Advanced Django را از دی ۱۴۰۰ تا دی ۱۴۰۱
+                    با نمره 95 از 100 گذراندم. پس از آن، به یادگیری فریم‌ورک‌های
+                    فرانت‌اند از جمله Vue.js، React و Next.js پرداختم. از اسفند
+                    1401 تا اردیبهشت 1403، به‌عنوان برنامه‌نویس در تیم فراییت در
+                    زمینه‌های Django، React و Vue فعالیت داشتم. در ادامه، از 13
+                    مرداد 1403 به‌عنوان برنامه‌نویس فول‌استک با تمرکز بر Django
+                    REST و Next.js در تیم دیجیتال مارکتینگ شرکت عصر دانش افزار
+                    پیوستم.
+                    `;
+
     return (
-        <div className="space-y-8 r2l" id="intro">
-            <MotionSlide once className="space-y-8">
-                <div className="space-y-2">
-                    <h3 className="transition-all text-xl sm:text-2xl font-light">
-                        درود
-                    </h3>
-                    <div>
-                        <h1 className="transition-all text-2xl sm:text-3xl font-bold bounce-left">
-                            پوریا دارندی
-                            <span className="font-normal"> هستم</span>
-                        </h1>
-                        <SkillsWriter />
-                    </div>
-
-                    <Paragraph
-                        className="transition-all text-justify text-sm sm:text-base 
-                        w-fit max-w-56 sm:max-w-[350px]">
-                        با داشتن دانش در زمینه توسعه وب و بازی، بهترین ها را
-                        ارائه می دهم، پروژه هایی که منجر به کار با کیفیت می شود.
-                    </Paragraph>
+        <Container
+            className="flex sm:flex-row justify-between gap-8 sm:gap-4 pt-4 sm:pt-8 r2l"
+            id="intro">
+            <MotionSlide once className="space-y-8 w-full">
+                <div>
+                    <Title className="text-2xl sm:text-3xl text-right">
+                        پوریا دارندی
+                    </Title>
+                    <SkillsWriter />
                 </div>
 
-                <div className="space-y-4">
-                    <Button
-                        as="link"
-                        href="/#services"
-                        variant="outlined"
-                        className="w-fit">
-                        تماس با من
-                    </Button>
-                    <SocialCard className="justify-end l2r" />
-                </div>
+                <Container className="items-start justify-start gap-0 p-0">
+                    <AnimatePresence initial={false}>
+                        <motion.div
+                            className="sm:hidden overflow-hidden"
+                            animate={{
+                                transition: {
+                                    duration: 0.75,
+                                    ease: "backInOut",
+                                },
+                                height: isExpanded ? "auto" : "63px",
+                            }}>
+                            <Paragraph className="text-justify text-sm sm:text-base max-w-80 r2l">
+                                {aboutMe}
+                            </Paragraph>
+                        </motion.div>
+                    </AnimatePresence>
+
+                    <button
+                        className="text-sm text-drd-primary"
+                        onClick={() => setIsExpanded(!isExpanded)}>
+                        {isExpanded ? "بستن" : "بیشتر"}
+                    </button>
+                </Container>
+
+                <Paragraph className="hidden sm:block text-justify md:text-sm lg:text-base max-w-80 r2l">
+                    متولد 14 بهمن 1380 هستم. فعالیت‌های برنامه‌نویسی خود را از
+                    دی‌ماه 1399 با یادگیری زبان Python به‌صورت خودآموز آغاز
+                    کردم. سپس، از تیر 1400 تا دی 1400 در مجتمع فنی تهران،
+                    دوره‌های الگوریتم در زبان‌های C++ و Python را با نمره 100 از
+                    100 و همچنین دوره Advanced Django را از دی ۱۴۰۰ تا دی ۱۴۰۱
+                    با نمره 95 از 100 گذراندم. پس از آن، به یادگیری فریم‌ورک‌های
+                    فرانت‌اند از جمله Vue.js، React و Next.js پرداختم. از اسفند
+                    1401 تا اردیبهشت 1403، به‌عنوان برنامه‌نویس در تیم فراییت در
+                    زمینه‌های Django، React و Vue فعالیت داشتم. در ادامه، از 13
+                    مرداد 1403 به‌عنوان برنامه‌نویس فول‌استک با تمرکز بر Django
+                    REST و Next.js در تیم دیجیتال مارکتینگ شرکت عصر دانش افزار
+                    پیوستم.
+                </Paragraph>
+
+                <Button
+                    as="link"
+                    href="/contact-me"
+                    variant="outlined"
+                    className="w-fit">
+                    تماس با من
+                </Button>
             </MotionSlide>
 
             <MotionSlide
                 once
                 initialDirection="left"
-                className="relative flex items-center justify-end">
+                className="relative flex items-center justify-center sm:justify-end w-full">
                 <div
                     className="bg-drd-light-neutral-2 shadow-inner overflow-clip transition-all  
-                    rounded-full w-60 sm:w-80 md:w-[350px] lg:w-96 h-60 sm:h-80 md:h-[350px] lg:h-96">
+                    rounded-full w-56 sm:w-72 md:w-80 lg:w-96">
                     <Image
+                        priority
+                        width={350}
+                        height={350}
                         src={pouria}
                         alt="Portrait of Pouria Darandi"
-                        priority
-                        width={350} // Specify the image dimensions
-                        height={350}
-                        layout="responsive" // Responsive behavior
-                        style={{ filter: "grayscale(100%)" }} // Apply the grayscale class
+                        className="filter grayscale hover:grayscale-0 transition-all duration-200"
                     />
                 </div>
             </MotionSlide>
-        </div>
+        </Container>
     );
 };
 

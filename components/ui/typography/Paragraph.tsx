@@ -20,7 +20,7 @@ const Paragraph = (props: MessageProps) => {
     return (
         <p
             className={cn(
-                `transition-all text-xs sm:text-[13px] text-wrap text-center r2l w-full ${statusStyles[status]}`,
+                `transition-all text-xs sm:text-[13px] text-wrap text-center r2l w-full ${statusStyles[status]} ss02`,
                 props.className
             )}>
             {props.children}

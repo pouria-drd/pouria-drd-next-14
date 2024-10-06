@@ -5,6 +5,7 @@ export { default as CloseButton } from "./button/CloseButton";
 export { default as Title } from "./typography/Title";
 export { default as Paragraph } from "./typography/Paragraph";
 export { default as Container } from "./typography/Container";
+export { default as ExtendableContent } from "./typography/ExtendableContent";
 
 export { default as Backdrop } from "./backdrop/Backdrop";
 export { default as MotionSlide } from "./slide/MotionSlide";
