@@ -10,7 +10,7 @@ const Projects = () => {
     return (
         <MotionSlide
             once
-            id="services"
+            id="projects"
             amount={0.6}
             duration={0.6}
             initialDirection="up">

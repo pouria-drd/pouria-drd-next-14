@@ -26,7 +26,7 @@ const Skills = () => {
                     داده‌ام
                 </Paragraph>
 
-                <Button as="link" href="/projects" className="w-fit">
+                <Button as="link" href="/services/#projects" className="w-fit">
                     مشاهده پروژه‌ها
                 </Button>
             </div>

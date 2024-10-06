@@ -1,4 +1,6 @@
+export { default as Input } from "./input/Input";
 export { default as Button } from "./button/Button";
+export { default as TextArea } from "./input/TextArea";
 export { default as MenuButton } from "./button/MenuButton";
 export { default as CloseButton } from "./button/CloseButton";
 
