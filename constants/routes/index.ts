@@ -8,10 +8,6 @@ const NavLinks: NavLink[] = [
         path: "/services",
     },
     {
-        name: "پروژه‌ها",
-        path: "/projects",
-    },
-    {
         name: "تماس",
         path: "/contact-me",
     },

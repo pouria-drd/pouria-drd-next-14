@@ -1,0 +1,30 @@
+.skills__content,
+.skills__group {
+    display: grid;
+}
+
+.skills__content {
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 4rem;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.skills__group {
+    row-gap: 1rem;
+    list-style: decimal-leading-zero;
+}
+
+/* .skills__item {
+} */
+
+.skills__item::marker {
+    @apply text-drd-primary;
+}
+
+@media screen and (max-width: 640px) {
+    .skills__content {
+        grid-template-columns: max-content;
+        row-gap: 1rem;
+    }
+}

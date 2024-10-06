@@ -35,7 +35,11 @@ const Intro = () => {
         <Container
             className="flex sm:flex-row justify-between gap-8 sm:gap-4 pt-4 sm:pt-8 r2l"
             id="intro">
-            <MotionSlide once className="space-y-8 w-full">
+            <MotionSlide
+                once
+                amount={0.6}
+                duration={0.6}
+                className="space-y-8 w-full">
                 <div>
                     <Title className="text-2xl sm:text-3xl text-right">
                         پوریا دارندی
@@ -93,6 +97,8 @@ const Intro = () => {
 
             <MotionSlide
                 once
+                amount={0.6}
+                duration={0.6}
                 initialDirection="left"
                 className="relative flex items-center justify-center sm:justify-end w-full">
                 <div

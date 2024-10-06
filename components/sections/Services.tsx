@@ -7,15 +7,14 @@ import {
     Title,
 } from "@/components/ui";
 
-const Service = () => {
+const Services = () => {
     return (
         <MotionSlide
             once
             id="services"
             amount={0.6}
             duration={0.6}
-            initialDirection="up"
-            className="border-t border-drd-neutral-11">
+            initialDirection="up">
             <Container className="gap-12 py-8">
                 <div className="text-center w-full">
                     <h5 className="w-full">
@@ -28,7 +27,7 @@ const Service = () => {
                     <ServiceCard>
                         <DesktopIcon />
                         <Title className="font-normal">
-                            توسعه دهنده فرانت اِند
+                            Frontend Developer
                         </Title>
                         <Paragraph className="max-w-60 sm:max-w-full mx-auto">
                             ایجاد رابط کاربری های مدرن با استفاده از فریم وورک
@@ -37,7 +36,7 @@ const Service = () => {
                     </ServiceCard>
                     <ServiceCard>
                         <CubeIcon />
-                        <Title className="font-normal">توسعه بازی</Title>
+                        <Title className="font-normal">Unity Developer</Title>
                         <Paragraph className="max-w-60 sm:max-w-full mx-auto">
                             ساخت بازی های هیحان انگیز و سرگرم کننده با استفاده
                             از موتور بازی سازی یونیتی (Unity).
@@ -46,9 +45,7 @@ const Service = () => {
 
                     <ServiceCard>
                         <ServerIcon />
-                        <Title className="font-normal">
-                            توسعه دهنده بک اِند
-                        </Title>
+                        <Title className="font-normal">Backend Developer</Title>
                         <Paragraph className="max-w-60 sm:max-w-full mx-auto">
                             با بهره گیری از قدرت Django و Django REST ساخت API
                             های قدرتمند انجام می‌شود.
@@ -60,4 +57,4 @@ const Service = () => {
     );
 };
 
-export default Service;
+export default Services;
