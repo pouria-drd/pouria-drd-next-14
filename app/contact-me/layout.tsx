@@ -1,5 +1,5 @@
-import { Metadata } from "next";
 import { Fragment } from "react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Contact Me",

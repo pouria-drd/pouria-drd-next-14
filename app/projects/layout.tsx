@@ -2,16 +2,16 @@ import { Fragment } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Blogs",
-    description: "Pouria Darandi's Blogs",
+    title: "Projects",
+    description: "Pouria Darandi's Projects",
 };
 
-interface BlogsLayoutProps {
+interface ProjectsLayoutProps {
     children: React.ReactNode;
 }
 
-function BlogsLayout(props: BlogsLayoutProps) {
+function ProjectsLayout(props: ProjectsLayoutProps) {
     return <Fragment>{props.children}</Fragment>;
 }
 
-export default BlogsLayout;
+export default ProjectsLayout;

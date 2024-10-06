@@ -4,12 +4,16 @@ const NavLinks: NavLink[] = [
         path: "/",
     },
     {
-        name: "تماس",
-        path: "/contact-me",
+        name: "خدمات",
+        path: "/services",
     },
     {
-        name: "وبلاگ",
-        path: "/blogs",
+        name: "پروژه‌ها",
+        path: "/projects",
+    },
+    {
+        name: "تماس",
+        path: "/contact-me",
     },
 ];
 

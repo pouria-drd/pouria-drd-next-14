@@ -43,10 +43,10 @@ const Intro = () => {
                     <SkillsWriter />
                 </div>
 
-                <Container className="items-start justify-start gap-0 p-0">
+                <Container className="sm:hidden items-start justify-start gap-0 p-0">
                     <AnimatePresence initial={false}>
                         <motion.div
-                            className="sm:hidden overflow-hidden"
+                            className="overflow-hidden"
                             animate={{
                                 transition: {
                                     duration: 0.75,
@@ -67,7 +67,7 @@ const Intro = () => {
                     </button>
                 </Container>
 
-                <Paragraph className="hidden sm:block text-justify md:text-sm lg:text-base max-w-80 r2l">
+                <Paragraph className="hidden sm:block text-justify md:text-sm max-w-80 r2l">
                     متولد 14 بهمن 1380 هستم. فعالیت‌های برنامه‌نویسی خود را از
                     دی‌ماه 1399 با یادگیری زبان Python به‌صورت خودآموز آغاز
                     کردم. سپس، از تیر 1400 تا دی 1400 در مجتمع فنی تهران،
@@ -86,8 +86,8 @@ const Intro = () => {
                     as="link"
                     href="/contact-me"
                     variant="outlined"
-                    className="w-fit">
-                    تماس با من
+                    className="w-fit mr-px">
+                    ارسال پیام
                 </Button>
             </MotionSlide>
 
@@ -97,7 +97,7 @@ const Intro = () => {
                 className="relative flex items-center justify-center sm:justify-end w-full">
                 <div
                     className="bg-drd-light-neutral-2 shadow-inner overflow-clip transition-all  
-                    rounded-full w-56 sm:w-72 md:w-80 lg:w-96">
+                    rounded-full w-56 sm:w-72 md:w-80 lg:w-[350px]">
                     <Image
                         priority
                         width={350}
